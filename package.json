@@ -1,0 +1,34 @@
+{
+  "name": "openpalette-ecosystem",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 1112",
+    "build": "next build",
+    "start": "next start -p 1113",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.15",
+    "@chakra-ui/react": "^1.6.9",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/roboto": "^4.5.0",
+    "@openpalette/core": "^0.3.1",
+    "@walletconnect/web3-provider": "^1.6.5",
+    "authereum": "^0.1.14",
+    "ethers": "^5.4.7",
+    "framer-motion": "^4.1.17",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "swr": "^1.0.1",
+    "walletlink": "^2.1.11",
+    "web3modal": "^1.9.4"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "typescript": "^4.4.3"
+  }
+}

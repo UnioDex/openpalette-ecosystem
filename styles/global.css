@@ -1,0 +1,8 @@
+.rainbowText {
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: white;
+    background-image: linear-gradient(to left, #FCF4C9, #FEE3E2, #FBCDF2, #E8BEFA, #ABBFFF, #BBF3C0);
+}

@@ -1,0 +1,6 @@
+<svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 14 16" height="90" width="90"
+     xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd"
+          d="M7 1a7 7 0 1 0 1 14v-1l1-2-1-1-1-1h1V9H7L6 8H5L4 7V6v1L3 6l1-2c0-1 0 0 0 0V3H3l1-1h3L6 3h1c1 0 0 0 0 0 0-1 0 0 0 0h2v1H8v1L7 6v1L6 6 5 7h1v1h1l1 1 1-1 1 1h1v1h1l-1 2-1 1-1 1-1 1A7 7 0 0 0 7 1zm2 7L8 7H7h2v1zM6 2V1h1L6 2zm2 1L7 2H6h2v1zm1 0L8 2H7V1h1l1 1v1z"
+          stroke="none"/>
+</svg>
