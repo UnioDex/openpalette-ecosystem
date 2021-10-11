@@ -14,7 +14,7 @@ const Header = (props) => {
             mt={4}
         >
             <LinkBox>
-                <Flex align="center">
+                <Flex direction={"column"}>
                     <LinkOverlay href={"/"}>
                         <Heading as="h1" fontSize={{base: "24px", md: "34px", lg: "40px"}} fontWeight={"400"}>
                             <Text className={"rainbowText"}>
