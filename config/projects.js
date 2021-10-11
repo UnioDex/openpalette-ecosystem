@@ -10,16 +10,16 @@ import dasGestell from "../types/DasGestell";
 import nueGeoGenesis from "../types/NueGeoGenesis";
 
 const nftProjects = [
-    cubeverseColor,
-    thePProject,
-    waterPalette,
-    nueGeo,
     theOrigins,
-    retroViz,
-    paletteMarbles,
+    thePProject,
+    cubeverseColor,
     colorBlast,
-    dasGestell,
-    nueGeoGenesis
+    nueGeo,
+    nueGeoGenesis,
+    paletteMarbles,
+    waterPalette,
+    retroViz,
+    dasGestell
 ];
 
 export default nftProjects;
