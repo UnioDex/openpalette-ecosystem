@@ -62,10 +62,12 @@ export default function ProjectCard({project}) {
                     </Center>
                 </Box>
                 {project.address && isConnected && <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>
-                    Your Balance: {balance}
+                    Balance: {balance}
                 </Text>}
-                {(!project.address || !isConnected) &&
-                <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>Your Balance: Unknown</Text>}
+                {(!project.address) &&
+                <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>Balance: Unknown</Text>
+                || (!isConnected) &&
+                <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>Balance: Connect Wallet</Text>}
                 <Center>
                     <HStack columns={"3"} gap={"5"} mt={"10px"}>
                         <WebsiteIcon url={project.website}/>
