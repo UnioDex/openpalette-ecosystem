@@ -11,6 +11,7 @@ export default function ProjectCard({project}) {
     const {isConnected, wallet} = useWallet();
     const {contract} = useContract(project.address);
     const [balance, setBalance] = useState(0);
+    const [totalSupply, setTotalSupply] = useState(0);
 
     useEffect(() => {
         if (!isConnected) return;
@@ -29,6 +30,12 @@ export default function ProjectCard({project}) {
                 setBalance(tokenCount.toNumber());
             else
                 setBalance(0);
+
+            try {
+                setTotalSupply(await contract.totalSupply());
+            } catch {
+                // ignored
+            }
         }
 
         // noinspection JSIgnoredPromiseFromCall
@@ -64,10 +71,18 @@ export default function ProjectCard({project}) {
                 {project.address && isConnected && <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>
                     Balance: {balance}
                 </Text>}
+                {project.address && isConnected && <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>
+                    Remaining Supply: {totalSupply ? (project.maxSupply - totalSupply.toNumber()) : "Unknwon"}
+                </Text>}
                 {(!project.address) &&
                 <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>Balance: Unknown</Text>
                 || (!isConnected) &&
                 <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>Balance: Connect Wallet</Text>}
+                {(!project.address) &&
+                <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>Remaining Supply: Unknown</Text>
+                || (!isConnected) &&
+                <Text fontSize={"16px"} color={"whiteAlpha.800"} align={"center"}>Remaining Supply: Connect
+                    Wallet</Text>}
                 <Center>
                     <HStack columns={"3"} gap={"5"} mt={"10px"}>
                         <WebsiteIcon url={project.website}/>

@@ -1,7 +1,7 @@
 import {useMemo} from "react";
 import {useBackupProvider} from "./useBackupProvider";
 import {useWallet} from "./useWallet";
-import {ERC721, ERC721__factory} from "../typechain";
+import {ERC721Enumerable, ERC721Enumerable__factory} from "../typechain";
 
 export enum ContractConnectionType {
     Injected = 0,
@@ -9,7 +9,7 @@ export enum ContractConnectionType {
 }
 
 export type UseContractValue = {
-    contract: ERC721;
+    contract: ERC721Enumerable;
     connectionType: ContractConnectionType;
 };
 
@@ -25,7 +25,7 @@ export function useContract(contractAddress: string): UseContractValue {
             }
             if (!contractAddress) return null;
             console.log(`Connecting to contract at address: ${contractAddress}`);
-            return ERC721__factory.connect(contractAddress, injectedProvider ?? provider);
+            return ERC721Enumerable__factory.connect(contractAddress, injectedProvider ?? provider);
         },
         [contractAddress, injectedProvider, provider],
     );
