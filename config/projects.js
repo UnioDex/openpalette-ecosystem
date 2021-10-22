@@ -8,6 +8,7 @@ import paletteMarbles from "../types/PaletteMarbles";
 import colorBlast from "../types/ColorBlast";
 import dasGestell from "../types/DasGestell";
 import nueGeoGenesis from "../types/NueGeoGenesis";
+import moltenCore from "../types/MoltenCore";
 
 const nftProjects = [
     theOrigins,
@@ -19,7 +20,8 @@ const nftProjects = [
     paletteMarbles,
     waterPalette,
     retroViz,
-    dasGestell
+    dasGestell,
+    moltenCore
 ];
 
 export default nftProjects;
