@@ -9,6 +9,7 @@ import colorBlast from "../types/ColorBlast";
 import dasGestell from "../types/DasGestell";
 import nueGeoGenesis from "../types/NueGeoGenesis";
 import moltenCore from "../types/MoltenCore";
+import genomeBlocks from "../types/GenomeBlocks";
 
 const nftProjects = [
     theOrigins,
@@ -21,7 +22,8 @@ const nftProjects = [
     waterPalette,
     retroViz,
     dasGestell,
-    moltenCore
+    moltenCore,
+    genomeBlocks
 ];
 
 export default nftProjects;
